@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/detail_loading_bg" />
+<!--    <item-->
+<!--        android:bottom="60dp"-->
+<!--        android:drawable="@drawable/img_loading_pic"-->
+<!--        android:start="300dp"-->
+<!--        android:end="300dp"-->
+<!--        android:top="60dp"/>-->
+</layer-list>

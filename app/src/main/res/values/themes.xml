@@ -1,0 +1,11 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.Dynsound" parent="Theme.Design.NoActionBar">
+        <!--        去除标题栏-->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <!--        浅色模式切图还没有，默认使用深色的-->
+        <item name="android:windowBackground">@color/black</item>
+    </style>
+</resources>

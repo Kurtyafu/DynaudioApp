@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#18191a">
+
+        <!--        <ImageView-->
+        <!--            android:id="@+id/img_top_bg"-->
+        <!--            app:layout_constraintTop_toTopOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            android:layout_width="1000dp"-->
+        <!--            android:layout_height="match_parent"/>-->
+
+        <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+        <!--            android:id="@+id/ll_player"-->
+        <!--            android:orientation="vertical"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent">-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_top"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="279dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_weight="1">
+
+            <com.byd.dynaudio_app.custom.xpop.MyXbanner
+                android:id="@+id/vp_record"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:isHandLoop="true"
+                app:isShowNumberIndicator="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:pointsVisibility="false" />
+
+            <ImageView
+                android:id="@+id/img_point"
+                android:layout_width="53dp"
+                android:layout_height="278dp"
+                android:layout_marginStart="216dp"
+                android:src="@drawable/img_point"
+                android:translationY="-1dp"
+                app:layout_constraintBottom_toBottomOf="@id/vp_record"
+                app:layout_constraintStart_toStartOf="@+id/vp_record"
+                app:layout_constraintTop_toTopOf="@+id/vp_record" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_player_list"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:layout_constraintTop_toBottomOf="parent">
+
+            <com.byd.dynaudio_app.custom.VerticalSingleRecyclerView
+                android:id="@+id/recycler_play_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="279dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include
+            android:id="@+id/inc_player"
+            layout="@layout/layout_full_player_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="279dp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_cancel"
+            android:layout_width="64dp"
+            android:layout_height="44dp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/arrow_down"
+            android:alpha="0.8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/ll_audio_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="11dp"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="@id/img_cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/img_cancel">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/audio_settings"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_audio_settings"
+                app:layout_constraintEnd_toStartOf="@+id/tv_audio_settings"
+                app:layout_constraintTop_toTopOf="@+id/tv_audio_settings" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/audio_settings"
+                android:textColor="#DDDEDE"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

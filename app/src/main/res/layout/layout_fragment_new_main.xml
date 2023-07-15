@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/srl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <TextView
+            android:id="@+id/checknet"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/loading_bg"
+            android:gravity="center"
+            android:text="@string/checknet"
+            android:textColor="@color/nomel_color_red"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <FrameLayout
+            android:id="@+id/frame_top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:alpha="0"
+            android:background="@color/black"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/ll_sound"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="@dimen/tab_marginTop"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@id/ll_user"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <View
+                android:id="@+id/img_audio_settings"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@drawable/audio_settings" />
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/tv_audio_settings"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginStart="10dp"-->
+            <!--                android:text="@string/audio_settings"-->
+            <!--                android:textColor="@color/white_alpha_80"-->
+            <!--                android:textSize="12sp" />-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_user"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="@dimen/tab_marginTop"
+            android:layout_marginEnd="11dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_user"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_user_def"
+                app:shapeAppearanceOverlay="@style/circleStyle" />
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/tv_user_name"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginStart="10dp"-->
+            <!--                android:text="个人中心"-->
+            <!--                android:textColor="@color/white_alpha_80"-->
+            <!--                android:textSize="12sp" />-->
+
+        </LinearLayout>
+
+
+        <com.byd.dynaudio_app.custom.CircleProgressView
+            android:id="@+id/progressView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="66dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:location="left"
+            app:progress_paint_color="@color/nomel_color_red"
+            app:progress_paint_width="@dimen/loading_width" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

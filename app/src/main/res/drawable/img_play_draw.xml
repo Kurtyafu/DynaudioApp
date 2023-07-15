@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 白色圆环背景 -->
+    <item android:drawable="@drawable/img_circle">
+    </item>
+
+    <!-- 中心图片 -->
+    <item android:gravity="center">
+        <bitmap android:src="@drawable/img_play_high_quality_without_circle" />
+    </item>
+
+</layer-list>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 圆角图片 -->
+    <style name="roundedCornerStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="circleStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="CustomSeekBar" parent="@android:style/Widget.SeekBar">
+        <item name="android:progressDrawable">@drawable/shape_progress_bg</item>
+        <item name="android:minHeight">3dp</item>
+        <item name="android:maxHeight">3dp</item>
+    </style>
+
+    <style name="AppTheme" parent="@style/Theme.Design">
+        <item name="android:fontFamily">@font/roboto</item>
+
+        <!--        <item name="android:windowActionBarOverlay">true</item>-->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!--        可能会影响沉浸状态栏 需要注意-->
+        <item name="android:windowBackground">@color/black</item>
+
+        <!--        这个加了会导致应用沉浸下方车机栏-->
+        <!--        <item name="android:windowTranslucentNavigation">false</item>-->
+        <item name="android:windowTranslucentStatus">true</item>
+
+        <!--        <item name="android:windowDrawsSystemBarBackgrounds">true</item>-->
+        <!--        <item name="android:statusBarColor">@color/transport</item>-->
+        <!--        <item name="android:windowTranslucentStatus">true</item>-->
+        <!--        <item name="android:windowLightStatusBar">true</item>-->
+    </style>
+
+    <style name="jz_style_dialog_progress" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/jz_popup_toast_anim</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="switchStyleDefault" parent="@style/TextAppearance.AppCompat.Widget.Switch">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/white_alpha_45</item>
+    </style>
+
+    <style name="switchStyleCheck" parent="@style/TextAppearance.AppCompat.Widget.Switch">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="topToastAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_top</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_top</item>
+    </style>
+</resources>

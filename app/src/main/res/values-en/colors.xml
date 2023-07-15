@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="aggregation_item_black_bg">#2f3031</color>
+    <color name="item_tv_title">#D9FFFFFF</color>
+    <color name="item_tv_subtitle">#73FFFFFF</color>
+</resources>

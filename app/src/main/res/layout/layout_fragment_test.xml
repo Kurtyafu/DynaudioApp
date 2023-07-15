@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.byd.dynaudio_app.custom.ScView
+            android:id="@+id/sc"
+            android:layout_width="288dp"
+            android:layout_height="288dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--        <com.byd.dynaudio_app.custom.lrc.MyLrc-->
+        <!--            app:layout_constraintTop_toTopOf="parent"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            android:layout_marginEnd="56dp"-->
+        <!--            android:id="@+id/lrc"-->
+        <!--            android:layout_width="270dp"-->
+        <!--            android:layout_height="320dp" />-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    <com.scwang.smartrefresh.layout.SmartRefreshLayout-->
+    <!--        android:id="@+id/srl"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent">-->
+
+    <!--        <androidx.recyclerview.widget.RecyclerView-->
+    <!--            android:id="@+id/recycler"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"/>-->
+
+    <!--    </com.scwang.smartrefresh.layout.SmartRefreshLayout>-->
+
+    <!--    <com.byd.dynaudio_app.custom.smart_refresh_layout.PullZoomView2-->
+    <!--        android:id="@+id/pzv"-->
+    <!--        android:scrollbars="none"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent">-->
+
+    <!--        <FrameLayout-->
+    <!--            android:id="@+id/refresh_view"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="0dp"-->
+    <!--            android:orientation="vertical">-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:tag="header"-->
+    <!--                android:visibility="gone"-->
+    <!--                android:layout_height="300dp">-->
+
+    <!--            </LinearLayout>-->
+
+    <!--            <ImageView-->
+    <!--                android:id="@+id/img_test"-->
+    <!--                android:tag="zoom"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="300dp" />-->
+
+
+    <!--        </FrameLayout>-->
+    <!--        <androidx.recyclerview.widget.RecyclerView-->
+    <!--            android:id="@+id/recycler"-->
+    <!--            android:tag="content"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content" />-->
+
+    <!--        <FrameLayout-->
+    <!--            android:id="@+id/load_view"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="0dp"/>-->
+
+    <!--    </com.byd.dynaudio_app.custom.smart_refresh_layout.PullZoomView2>-->
+
+
+    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent">-->
+
+    <!--        <com.byd.dynaudio_app.custom.smart_refresh_layout.NestedParentView-->
+    <!--            android:layout_width="200dp"-->
+    <!--            android:layout_height="300dp"-->
+    <!--            android:background="@color/_xpopup_dark_color"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent">-->
+
+    <!--            <com.byd.dynaudio_app.custom.smart_refresh_layout.NestedChildView-->
+    <!--                android:layout_width="100dp"-->
+    <!--                android:layout_height="100dp"-->
+    <!--                android:background="@color/white" />-->
+
+    <!--        </com.byd.dynaudio_app.custom.smart_refresh_layout.NestedParentView>-->
+
+
+    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--    <com.byd.dynaudio_app.custom.smart_refresh_layout.HeaderScrollView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent">-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:orientation="vertical">-->
+
+    <!--            <com.byd.dynaudio_app.custom.smart_refresh_layout.StickyLinearLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:orientation="vertical">-->
+
+    <!--                &lt;!&ndash; 布局省略 &ndash;&gt;-->
+
+    <!--                <TextView-->
+    <!--                    android:id="@+id/remove_view"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="80dp"-->
+    <!--                    android:background="@android:color/background_dark"-->
+    <!--                    android:text="吸顶View-1"-->
+    <!--                    android:textColor="@color/purple_200"-->
+    <!--                    app:isSticky="true" />-->
+
+    <!--                &lt;!&ndash; 布局省略 &ndash;&gt;-->
+
+    <!--            </com.byd.dynaudio_app.custom.smart_refresh_layout.StickyLinearLayout>-->
+
+    <!--            <androidx.recyclerview.widget.RecyclerView-->
+    <!--                android:id="@+id/recycler"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="match_parent" />-->
+
+    <!--        </LinearLayout>-->
+    <!--    </com.byd.dynaudio_app.custom.smart_refresh_layout.HeaderScrollView>-->
+
+
+    <!--    <com.scwang.smartrefresh.layout.SmartRefreshLayout-->
+    <!--        android:id="@+id/refreshLayout"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent">-->
+
+    <!--        <com.scwang.smartrefresh.layout.header.ClassicsHeader-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content" />-->
+
+    <!--       <LinearLayout-->
+    <!--           android:layout_width="match_parent"-->
+    <!--           android:layout_height="match_parent"-->
+    <!--           android:orientation="vertical">-->
+
+    <!--           <ImageView-->
+    <!--               android:id="@+id/img_test"-->
+    <!--               android:scaleType="fitXY"-->
+    <!--               android:layout_width="match_parent"-->
+    <!--               android:layout_height="300dp" />-->
+
+    <!--           <ImageView-->
+    <!--               android:id="@+id/img_test2"-->
+    <!--               android:scaleType="fitXY"-->
+    <!--               android:layout_width="match_parent"-->
+    <!--               android:layout_height="match_parent" />-->
+
+    <!--       </LinearLayout>-->
+
+    <!--        <com.scwang.smartrefresh.layout.footer.ClassicsFooter-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content" />-->
+    <!--    </com.scwang.smartrefresh.layout.SmartRefreshLayout>-->
+</layout>

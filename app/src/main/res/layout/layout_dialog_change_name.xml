@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="400dp"
+    android:layout_height="wrap_content"
+    android:background="@color/dark_item"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <ImageView
+            android:id="@+id/img_close"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:src="@mipmap/ic_close" />
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="修改用户名"
+            android:textColor="@color/white_alpha_80"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/white_alpha_5"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/edit_name"
+            android:layout_width="287dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:hint="输入一个名字吧"
+            android:maxLength="9"
+            android:singleLine="true"
+            android:paddingStart="20dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white_alpha_45"
+            android:textSize="15sp" />
+
+        <!--        <View-->
+        <!--            android:layout_width="3dp"-->
+        <!--            android:layout_height="20dp"-->
+        <!--            android:background="#5D5D5E" />-->
+
+        <View
+            android:id="@+id/view_clear"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@mipmap/ic_clear" />
+
+        <TextView
+            android:id="@+id/txt_length"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0/9"
+            android:textColor="@color/white_alpha_45"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:text="请输入9个以内的字符"
+        android:textColor="@color/white_alpha_45"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:id="@+id/txt_confirm"
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/select_button"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="@drawable/select_text"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_cancel"
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="40dp"
+            android:background="@color/white_alpha_20"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/white_alpha_45"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

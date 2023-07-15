@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_item_station"
+        android:layout_width="match_parent"
+        android:layout_height="93dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/select_item_golden_bg"
+        android:paddingVertical="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/tv_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/white_alpha_45"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/tv_title"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.byd.dynaudio_app.custom.PlayAnimatorView
+            android:id="@+id/img_num"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_playing_icon"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/tv_num"
+            app:layout_constraintEnd_toEndOf="@id/tv_num"
+            app:layout_constraintStart_toStartOf="@id/tv_num"
+            app:layout_constraintTop_toTopOf="@id/tv_num" />
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="53dp"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:maxWidth="650dp"
+            android:textColor="@color/white_alpha_80"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            app:layout_constraintStart_toStartOf="@id/tv_title"
+            android:layout_marginTop="10dp">
+            <com.byd.dynaudio_app.custom.LabelView
+                android:id="@+id/tv_label"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_marginEnd="5dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_singer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxWidth="235dp"
+                android:maxLines="1"
+                android:textColor="@color/white_alpha_45"
+                android:textSize="15sp"
+                app:layout_constraintTop_toTopOf="@id/tv_label"
+                app:layout_constraintBottom_toBottomOf="@id/tv_label"
+                app:layout_constraintStart_toEndOf="@id/tv_label"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@id/tv_singer"
+                app:layout_constraintStart_toEndOf="@id/tv_singer"
+                app:layout_constraintTop_toTopOf="@id/tv_singer">
+
+                <ImageView
+                    android:id="@+id/img_time"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/img_finish" />
+
+                <TextView
+                    android:id="@+id/tv_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/white_alpha_45"
+                    android:textSize="15sp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/img_collect"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="5dp"
+            android:padding="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

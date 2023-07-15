@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="279dp"
+        android:background="@null">
+
+        <ImageView
+            android:id="@+id/img_bottom_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="0dp"-->
+        <!--            app:layout_constraintHorizontal_weight="1"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="-59dp"-->
+        <!--            android:layout_marginBottom="134dp"-->
+        <!--            android:layout_marginEnd="@dimen/dp_10"-->
+        <!--            app:layout_constraintEnd_toStartOf="@id/tv_label"-->
+        <!--            app:layout_constraintBottom_toTopOf="@id/img_mode"-->
+        <!--            app:layout_constraintStart_toStartOf="@id/img_mode" />-->
+
+
+        <!--        </LinearLayout>-->
+
+        <com.byd.dynaudio_app.custom.MarqueeTextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="69dp"
+            android:layout_marginEnd="40dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/item_tv_title"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tv_current_time"
+            app:layout_constraintEnd_toStartOf="@id/img_video_or_music"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="@id/tv_current_time" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toStartOf="@id/tv_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_title">
+
+            <TextView
+                android:id="@+id/tv_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:maxWidth="200dp"
+                android:maxLines="1"
+                android:textColor="@color/white_alpha_45"
+                android:textSize="15sp" />
+
+            <com.byd.dynaudio_app.custom.LabelView
+                android:id="@+id/tv_label"
+                android:layout_marginTop="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/img_video_or_music"
+            android:layout_width="73dp"
+            android:layout_height="73dp"
+            android:padding="20dp"
+            android:src="@drawable/img_video"
+            app:layout_constraintBottom_toBottomOf="@id/img_previous15"
+            app:layout_constraintEnd_toStartOf="@id/img_previous15"
+            app:layout_constraintTop_toTopOf="@id/img_previous15" />
+
+        <ImageView
+            android:id="@+id/img_previous15"
+            android:layout_width="73dp"
+            android:layout_height="73dp"
+            android:layout_marginStart="40dp"
+            android:padding="20dp"
+            android:src="@drawable/img_previous_15"
+            app:layout_constraintBottom_toBottomOf="@id/img_next30"
+            app:layout_constraintEnd_toStartOf="@id/img_next30"
+            app:layout_constraintTop_toTopOf="@id/img_next30" />
+
+        <ImageView
+            android:id="@+id/img_next30"
+            android:layout_width="73dp"
+            android:layout_height="73dp"
+            android:padding="20dp"
+            android:src="@drawable/img_next_30"
+            app:layout_constraintBottom_toBottomOf="@id/img_collect"
+            app:layout_constraintEnd_toStartOf="@id/img_collect"
+            app:layout_constraintTop_toTopOf="@id/img_collect" />
+
+        <ImageView
+            android:id="@+id/img_collect"
+            android:layout_width="73dp"
+            android:layout_height="73dp"
+            android:layout_marginEnd="-20dp"
+            android:layout_marginBottom="76dp"
+            android:padding="20dp"
+            android:src="@drawable/img_collect"
+            app:layout_constraintBottom_toTopOf="@id/img_menu"
+            app:layout_constraintEnd_toEndOf="@id/tv_total_time" />
+
+        <TextView
+            android:id="@+id/tv_current_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="107dp"
+            android:gravity="end"
+            android:minWidth="39dp"
+            android:text="00:00"
+            android:textColor="@color/white_alpha_30"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/progress"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/progress" />
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/progress"
+            style="@style/CustomSeekBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="7dp"
+            android:layout_marginBottom="21dp"
+            android:duplicateParentState="true"
+            android:indeterminate="false"
+            android:max="10000"
+            android:thumb="@drawable/thumb"
+            app:layout_constraintBottom_toTopOf="@id/img_play"
+            app:layout_constraintEnd_toStartOf="@id/tv_total_time"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/tv_current_time" />
+
+        <TextView
+            android:id="@+id/tv_total_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="107dp"
+            android:gravity="end"
+            android:minWidth="39dp"
+            android:text="04:20"
+            android:textColor="@color/white_alpha_30"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/progress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/progress" />
+
+        <ImageView
+            android:id="@+id/img_play"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="30dp"
+            android:src="@drawable/img_play"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_mode"
+            android:layout_width="73dp"
+            android:layout_height="73dp"
+            android:layout_marginEnd="173dp"
+            android:padding="20dp"
+            android:src="@drawable/img_list_loop"
+            app:layout_constraintBottom_toBottomOf="@+id/img_play"
+            app:layout_constraintEnd_toStartOf="@id/img_play"
+            app:layout_constraintTop_toTopOf="@+id/img_play" />
+
+        <TextView
+            android:id="@+id/tv_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="193dp"
+            android:fontFamily="@font/helvetica"
+            android:textColor="@color/white_alpha_80"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/img_play"
+            app:layout_constraintEnd_toStartOf="@id/img_play"
+            app:layout_constraintTop_toTopOf="@+id/img_play" />
+
+        <ImageView
+            android:id="@+id/img_previous"
+            android:layout_width="73dp"
+            android:layout_height="73dp"
+            android:layout_marginEnd="60dp"
+            android:padding="20dp"
+            android:src="@drawable/img_previous"
+            app:layout_constraintBottom_toBottomOf="@+id/img_play"
+            app:layout_constraintEnd_toStartOf="@id/img_play"
+            app:layout_constraintTop_toTopOf="@+id/img_play" />
+
+        <ImageView
+            android:id="@+id/img_next"
+            android:layout_width="73dp"
+            android:layout_height="73dp"
+            android:layout_marginStart="60dp"
+            android:padding="20dp"
+            android:src="@drawable/img_next"
+            app:layout_constraintBottom_toBottomOf="@+id/img_play"
+            app:layout_constraintStart_toEndOf="@id/img_play"
+            app:layout_constraintTop_toTopOf="@+id/img_play" />
+
+        <ImageView
+            android:id="@+id/img_menu"
+            android:layout_width="73dp"
+            android:layout_height="73dp"
+            android:layout_marginStart="173dp"
+            android:padding="20dp"
+            android:src="@drawable/img_menu"
+            app:layout_constraintBottom_toBottomOf="@+id/img_play"
+            app:layout_constraintStart_toEndOf="@id/img_play"
+            app:layout_constraintTop_toTopOf="@+id/img_play" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

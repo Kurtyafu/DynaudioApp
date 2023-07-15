@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="#272829"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_cancel"
+            android:layout_width="88dp"
+            android:layout_height="44dp"
+            android:paddingHorizontal="32dp"
+            android:paddingVertical="10dp"
+            android:src="@drawable/arrow_down"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:textColor="@color/white_alpha_80"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/play_list"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.byd.dynaudio_app.custom.VerticalSingleRecyclerView
+            android:id="@+id/recycler_play_list"
+            android:layout_marginTop="44dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

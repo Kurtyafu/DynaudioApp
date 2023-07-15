@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/root_bg"
+        android:fillViewport="true">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/swipe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="0dp"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/ll_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/top_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp" />
+
+                <!--                <LinearLayout-->
+                <!--                    android:id="@+id/ll_scroll"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:orientation="vertical">-->
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_weight="1"
+                    android:background="@color/card_bg"
+                    android:nestedScrollingEnabled="false"
+                    android:overScrollMode="never" />
+
+                <!--                    <View-->
+                <!--                        android:id="@+id/vvv"-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="63dp"/>-->
+
+                <!--                </LinearLayout>-->
+
+
+                <!--                <View-->
+                <!--                    android:id="@+id/vvv"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="63dp"/>-->
+
+                <!--                    <View-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="73dp"/>-->
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/tv_loading"-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginHorizontal="20dp"-->
+                <!--                        android:layout_marginTop="0dp"-->
+                <!--                        android:background="@color/card_bg"-->
+                <!--                        android:gravity="center_horizontal"-->
+                <!--                        android:paddingTop="50dp"-->
+                <!--                        android:paddingBottom="141dp"-->
+                <!--                        android:textColor="@color/white_alpha_45"-->
+                <!--                        android:textSize="12sp" />-->
+
+            </LinearLayout>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <FrameLayout
+            android:id="@+id/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:alpha="0"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/loading"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="66dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="66dp"
+            android:src="@drawable/arrow_left"
+            android:scaleType="centerInside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <View
+            android:id="@+id/vv_back"
+            app:layout_constraintTop_toTopOf="@id/img_back"
+            app:layout_constraintBottom_toBottomOf="@id/img_back"
+            app:layout_constraintStart_toStartOf="@id/img_back"
+            app:layout_constraintEnd_toEndOf="@id/img_back"
+            android:layout_width="60dp"
+            android:layout_height="60dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

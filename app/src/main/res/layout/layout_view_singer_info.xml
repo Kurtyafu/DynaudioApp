@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="70dp"
+    android:layout_marginEnd="60dp">
+
+    <ImageView
+        android:id="@+id/img_avatar"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/ic_launcher_foreground" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@id/img_avatar"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_singer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="小泽征尔  Seiji Ozawa"
+            android:textColor="@color/white_alpha_80"
+            android:textSize="12sp"
+            android:maxLines="1"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_singer_info"
+            android:layout_width="384dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:lineHeight="20dp"
+            android:maxLines="2"
+            android:text="日本指挥家，1935年出生于中国沈阳，2015年获肯尼迪中心荣誉大奖，2018年再获肯尼迪中心荣誉大奖。"
+            android:textColor="@color/white_alpha_45"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

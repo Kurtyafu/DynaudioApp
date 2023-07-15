@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="216dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/img_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/detail_img_loading"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.byd.dynaudio_app.custom.LabelView
+            android:id="@+id/tv_label"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/img_show"
+            app:layout_constraintEnd_toEndOf="@+id/img_show">
+
+            <View
+                android:id="@+id/gas"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_gravity="center"
+                android:background="@drawable/play_bg_with_gas"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/img_play"
+                android:layout_width="53dp"
+                android:layout_height="53dp"
+                android:padding="10dp"
+                android:src="@mipmap/ic_play_small"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/detail_loading"
+            android:ellipsize="end"
+            android:maxWidth="180dp"
+            android:maxLines="1"
+            android:textColor="@color/item_tv_title"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/img_show" />
+
+        <TextView
+            android:id="@+id/tv_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/detail_loading"
+            android:ellipsize="end"
+            android:maxWidth="180dp"
+            android:maxLines="1"
+            android:text="一二三四五"
+            android:textColor="@color/item_tv_subtitle"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

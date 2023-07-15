@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center_vertical|start"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="20dp">
+
+        <com.byd.dynaudio_app.custom.PlayAnimatorView
+            android:id="@+id/img_ani"
+            android:layout_marginEnd="5dp"
+            android:layout_width="16dp"
+            android:layout_height="16dp" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:maxLines="1"
+            android:maxWidth="240dp"
+            android:textColor="@color/white_alpha_80"
+            android:gravity="start"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/tv_singer"
+            android:layout_marginStart="10dp"
+            android:textSize="15sp"
+            android:maxWidth="60dp"
+            android:textColor="@color/white_alpha_45"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.byd.dynaudio_app.custom.LabelView
+            android:id="@+id/tv_label"
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"/>
+
+    </LinearLayout>
+</layout>

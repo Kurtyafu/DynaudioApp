@@ -1,0 +1,70 @@
+package com.byd.dynaudio_app.pojo;
+
+public class ModuleInfo {
+    private String homeDesc;
+    private String homeImgUrl;
+    private String detailTitle;
+    private String detailDesc;
+    private String detailImgUrl;
+    private Object storeList;
+
+    public String getHomeDesc() {
+        return homeDesc;
+    }
+
+    public void setHomeDesc(String homeDesc) {
+        this.homeDesc = homeDesc;
+    }
+
+    public String getHomeImgUrl() {
+        return homeImgUrl;
+    }
+
+    public void setHomeImgUrl(String homeImgUrl) {
+        this.homeImgUrl = homeImgUrl;
+    }
+
+    public String getDetailTitle() {
+        return detailTitle;
+    }
+
+    public void setDetailTitle(String detailTitle) {
+        this.detailTitle = detailTitle;
+    }
+
+    public String getDetailDesc() {
+        return detailDesc;
+    }
+
+    public void setDetailDesc(String detailDesc) {
+        this.detailDesc = detailDesc;
+    }
+
+    public String getDetailImgUrl() {
+        return detailImgUrl;
+    }
+
+    public void setDetailImgUrl(String detailImgUrl) {
+        this.detailImgUrl = detailImgUrl;
+    }
+
+    public Object getStoreList() {
+        return storeList;
+    }
+
+    public void setStoreList(Object storeList) {
+        this.storeList = storeList;
+    }
+
+    @Override
+    public String toString() {
+        return "ModuleInfo{" +
+                "homeDesc='" + homeDesc + '\'' +
+                ", homeImgUrl='" + homeImgUrl + '\'' +
+                ", detailTitle='" + detailTitle + '\'' +
+                ", detailDesc='" + detailDesc + '\'' +
+                ", detailImgUrl='" + detailImgUrl + '\'' +
+                ", storeList=" + storeList +
+                '}';
+    }
+}

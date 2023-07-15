@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--底层背景-->
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="0.25dp" />
+            <solid android:color="@color/play_progress_right_color"/>
+            <size android:height="3dp"/>
+        </shape>
+    </item>
+    <!--滑动过的部分-->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <solid android:color="@color/play_progress_left_color"/>
+            </shape>
+        </clip>
+    </item>
+</layer-list>

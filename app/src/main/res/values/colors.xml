@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="label_color">#b17243</color>
+    <color name="label_color_red">#CF022D</color>
+    <color name="hifi_content_color">#dcdcdd</color>
+    <color name="card_bg">#272829</color>
+    <color name="item_press">#212223</color>
+    <!--透明-->
+    <color name="transparent">#00000000</color>
+    <!--半透明-->
+    <color name="translucent">#22050505</color>
+
+    <color name="cl_bottom_color">#FF272829</color>
+    <color name="list_color">#CC131313</color>
+
+    <color name="setting_skin_selected">#CF022D</color>
+    <color name="setting_skin_unselected">#474848</color>
+    <color name="aggregation_item_black_bg">#2f3031</color>
+    <color name="item_tv_title">#D9FFFFFF</color>
+    <color name="item_tv_subtitle">#73FFFFFF</color>
+    <color name="play_progress_right_color">@color/white_alpha_10</color>
+    <color name="play_progress_left_color">#960020</color>
+    <color name="play_progress_thumb_color">#ffcf022d</color>
+    <color name="transport">#00000000</color>
+    <color name="nomel_color_red">#CD1038</color>
+    <color name="colorTabText">#585858</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="detail_loading">#373839</color>
+    <color name="detail_loading_bg">#2E2F30</color>
+    <color name="switch_demo">#73858585</color>
+
+    <!-- 带有透明度的白 -->
+    <color name="white_alpha_95">#F2FFFFFF</color>
+    <color name="white_alpha_90">#E6FFFFFF</color>
+    <color name="white_alpha_85">#D9FFFFFF</color>
+    <color name="white_alpha_80">#CCFFFFFF</color>
+    <color name="white_alpha_75">#BFFFFFFF</color>
+    <color name="white_alpha_70">#B3FFFFFF</color>
+    <color name="white_alpha_65">#A6FFFFFF</color>
+    <color name="white_alpha_60">#99FFFFFF</color>
+    <color name="white_alpha_55">#8CFFFFFF</color>
+    <color name="white_alpha_50">#80FFFFFF</color>
+    <color name="white_alpha_45">#73FFFFFF</color>
+    <color name="white_alpha_40">#66FFFFFF</color>
+    <color name="white_alpha_35">#59FFFFFF</color>
+    <color name="white_alpha_30">#4DFFFFFF</color>
+    <color name="white_alpha_25">#40FFFFFF</color>
+    <color name="white_alpha_20">#33FFFFFF</color>
+    <color name="white_alpha_15">#26FFFFFF</color>
+    <color name="white_alpha_10">#1AFFFFFF</color>
+    <color name="white_alpha_5">#0DFFFFFF</color>
+
+    <!-- 带有透明度的黑 -->
+    <color name="black_alpha_95">#F2000000</color>
+    <color name="black_alpha_90">#E6000000</color>
+    <color name="black_alpha_85">#D9000000</color>
+    <color name="black_alpha_80">#CC000000</color>
+    <color name="black_alpha_75">#BF000000</color>
+    <color name="black_alpha_70">#B3000000</color>
+    <color name="black_alpha_65">#A6000000</color>
+    <color name="black_alpha_60">#99000000</color>
+    <color name="black_alpha_55">#8C000000</color>
+    <color name="black_alpha_50">#80000000</color>
+    <color name="black_alpha_45">#73000000</color>
+    <color name="black_alpha_40">#66000000</color>
+    <color name="black_alpha_35">#59000000</color>
+    <color name="black_alpha_30">#4D000000</color>
+    <color name="black_alpha_25">#40000000</color>
+    <color name="black_alpha_20">#33000000</color>
+    <color name="black_alpha_15">#26000000</color>
+    <color name="black_alpha_10">#1A000000</color>
+    <color name="black_alpha_5">#0D000000</color>
+
+    <color name="dark_item">#272829</color>
+
+    <color name="button_selected">#CF022D</color>
+    <color name="mini_player_progress">#FFCF022D</color>
+    <color name="mini_player_progress_bg">#58595A</color>
+    <color name="speedCheckColor">#FFCF022D</color>
+    <color name="speedUncheckColor">#FFFFFFFF</color>
+    <color name="speedCheckBg">#FF2F3031</color>
+    <color name="speedUncheckBg">#FF000000</color>
+    <color name="root_bg">#FF000000</color>
+    <color name="loading_bg">#FF2F3031</color>
+
+    <color name="miniplayicon">#393A3B</color>
+
+    <!--    lrc 相关-->
+    <color name="lrc_normal_text_color">#9E9E9E</color>
+    <color name="lrc_current_text_color">#FF4081</color>
+    <color name="lrc_timeline_text_color">#F8BBD0</color>
+    <color name="lrc_timeline_color">#809E9E9E</color>
+    <color name="lrc_time_text_color">#809E9E9E</color>
+
+    <!--    // 顶部默认颜色-->
+    <color name="topDefaultColor">#1AFFFFFF</color>
+</resources>

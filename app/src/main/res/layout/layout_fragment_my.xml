@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_my_not_login" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp">
+
+                <ImageView
+                    android:id="@+id/btn_back"
+                    android:layout_width="64dp"
+                    android:layout_height="44dp"
+                    android:scaleType="center"
+                    android:src="@mipmap/ic_back" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="个人中心"
+                    android:textColor="@color/white_alpha_80"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="503dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_not_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="503dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="164dp"
+                        android:text="@string/not_login_user_name_def"
+                        android:textColor="@color/white_alpha_80"
+                        android:textSize="35sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/hint"
+                        android:textColor="@color/white_alpha_65"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/btn_login"
+                        android:layout_width="238dp"
+                        android:layout_height="63dp"
+                        android:layout_marginTop="40dp"
+                        android:background="#CF022D"
+                        android:gravity="center"
+                        android:text="@string/login_now"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_user_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="503dp"
+                    android:visibility="gone">
+
+                    <FrameLayout
+                        android:id="@+id/fl_avatar"
+                        android:layout_width="349dp"
+                        android:layout_height="305dp"
+                        android:layout_marginStart="160dp"
+                        android:layout_marginTop="108dp"
+                        android:background="@mipmap/bg_avatar">
+
+                        <ImageView
+                            android:id="@+id/img_avatar"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_marginStart="141dp"
+                            android:layout_marginTop="77dp"
+                            android:src="@mipmap/ic_logo" />
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/txt_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="207dp"
+                        android:layout_toEndOf="@id/fl_avatar"
+                        android:text="@string/login_user_name_def"
+                        android:textColor="@color/white"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/img_edit"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="210dp"
+                        android:layout_toEndOf="@id/txt_user_name"
+                        android:background="@mipmap/ic_edit" />
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_below="@id/txt_user_name"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toEndOf="@id/fl_avatar"
+                        android:background="@mipmap/ic_vip" />
+
+                    <TextView
+                        android:id="@+id/txt_vip_level"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_user_name"
+                        android:layout_marginStart="54.5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/fl_avatar"
+                        android:text="01"
+                        android:textColor="#B07143"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="70dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_collect"
+                    android:layout_width="match_parent"
+                    android:layout_height="128dp"
+                    android:layout_weight="1"
+                    android:background="@color/dark_item"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_marginTop="25dp"
+                        android:background="@mipmap/ic_not_collect" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/collect"
+                        android:textColor="@color/white_alpha_80"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/txt_collect_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="0"
+                        android:textColor="@color/white_alpha_45"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_record"
+                    android:layout_width="match_parent"
+                    android:layout_height="128dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/dark_item"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_marginTop="25dp"
+                        android:background="@mipmap/ic_record" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/record"
+                        android:textColor="@color/white_alpha_80"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/txt_record_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="0"
+                        android:textColor="@color/white_alpha_45"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="128dp"
+                    android:layout_weight="1"
+                    android:background="@color/dark_item"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_marginTop="35dp"
+                        android:background="@mipmap/ic_setting" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/setting"
+                        android:textColor="@color/white_alpha_80"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</layout>

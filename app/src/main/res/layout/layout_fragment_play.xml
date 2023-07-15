@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#18191a">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_top"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/cl_bottom"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_weight="1">
+
+            <ImageView
+                android:id="@+id/img_cancel"
+                android:layout_width="64dp"
+                android:layout_height="44dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/arrow_down"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_audio_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="20dp"
+                android:text="@string/audio_settings"
+                android:textColor="#DDDEDE"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_audio_settings"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/audio_settings"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_audio_settings"
+                app:layout_constraintEnd_toStartOf="@+id/tv_audio_settings"
+                app:layout_constraintTop_toTopOf="@+id/tv_audio_settings" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/vp_record"
+                android:layout_width="550dp"
+                android:layout_height="366dp"
+                android:layout_marginTop="74dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/img_record"
+                    android:layout_width="366dp"
+                    android:layout_height="366dp"
+                    android:src="@drawable/img_record_732"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/img_show"
+                    android:layout_width="223dp"
+                    android:layout_height="223dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="@id/img_record"
+                    app:layout_constraintEnd_toEndOf="@id/img_record"
+                    app:layout_constraintStart_toStartOf="@id/img_record"
+                    app:layout_constraintTop_toTopOf="@id/img_record"
+                    app:shapeAppearanceOverlay="@style/circleStyle" />
+
+                <ImageView
+                    android:id="@+id/img_point"
+                    android:layout_width="53dp"
+                    android:layout_height="278dp"
+                    android:layout_marginEnd="390dp"
+                    android:layout_marginBottom="50dp"
+                    android:src="@drawable/img_point"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.byd.dynaudio_app.custom.lrc.LrcView
+                android:id="@+id/lv_lyrics"
+                android:layout_width="wrap_content"
+                android:layout_height="356dp"
+                android:layout_marginTop="77dp"
+                app:layout_constraintStart_toEndOf="@+id/vp_record"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.byd.dynaudio_app.custom.VerticalSingleRecyclerView
+                android:id="@+id/recycler_play_list"
+                android:layout_width="648dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="44dp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="279dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="108dp"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/item_tv_title"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.byd.dynaudio_app.custom.LabelView
+                android:id="@+id/tv_label"
+                android:layout_width="37dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_title"
+                app:layout_constraintStart_toEndOf="@id/tv_title"
+                app:layout_constraintTop_toTopOf="@+id/tv_title" />
+
+            <TextView
+                android:id="@+id/tv_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="#59FFFFFF"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@id/tv_title"
+                app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+            <LinearLayout
+                android:id="@+id/ll_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:layout_marginEnd="109dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageView
+                    android:id="@+id/img_video_or_music"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:src="@drawable/img_video" />
+
+                <ImageView
+                    android:id="@+id/img_previous15"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:layout_marginStart="40dp"
+                    android:src="@drawable/img_previous_15" />
+
+                <ImageView
+                    android:id="@+id/img_next30"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:layout_marginStart="40dp"
+                    android:src="@drawable/img_next_30" />
+
+                <ImageView
+                    android:id="@+id/img_collect"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:layout_marginStart="40dp"
+                    android:src="@drawable/img_collect" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="132dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_current_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:textColor="#b3ffffff" />
+
+                <androidx.appcompat.widget.AppCompatSeekBar
+                    android:id="@+id/progress"
+                    style="@style/CustomSeekBar"
+                    android:layout_width="532dp"
+                    android:layout_height="wrap_content"
+                    android:duplicateParentState="true"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:progress="30"
+                    android:thumb="@drawable/thumb" />
+
+                <TextView
+                    android:id="@+id/tv_total_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:textColor="#b3ffffff" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_play"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="30dp"
+                android:src="@drawable/img_play"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_mode"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_marginEnd="193dp"
+                android:src="@drawable/img_list_loop"
+                app:layout_constraintBottom_toBottomOf="@+id/img_play"
+                app:layout_constraintEnd_toStartOf="@id/img_play"
+                app:layout_constraintTop_toTopOf="@+id/img_play" />
+
+            <ImageView
+                android:id="@+id/img_previous"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_marginEnd="80dp"
+                android:src="@drawable/img_previous"
+                app:layout_constraintBottom_toBottomOf="@+id/img_play"
+                app:layout_constraintEnd_toStartOf="@id/img_play"
+                app:layout_constraintTop_toTopOf="@+id/img_play" />
+
+            <ImageView
+                android:id="@+id/img_next"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_marginStart="80dp"
+                android:src="@drawable/img_next"
+                app:layout_constraintBottom_toBottomOf="@+id/img_play"
+                app:layout_constraintStart_toEndOf="@id/img_play"
+                app:layout_constraintTop_toTopOf="@+id/img_play" />
+
+            <ImageView
+                android:id="@+id/img_menu"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_marginStart="193dp"
+                android:src="@drawable/img_menu"
+                app:layout_constraintBottom_toBottomOf="@+id/img_play"
+                app:layout_constraintStart_toEndOf="@id/img_play"
+                app:layout_constraintTop_toTopOf="@+id/img_play" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

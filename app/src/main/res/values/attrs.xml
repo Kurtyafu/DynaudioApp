@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="HifiCard">
+        <attr name="cardTitleText" format="string" />
+        <attr name="cardContent1Text" format="string" />
+        <attr name="cardContent2Text" format="string" />
+        <attr name="cardContent3Text" format="string" />
+        <attr name="cardTitleImg" format="reference" />
+        <attr name="cardContent1Img" format="reference" />
+        <attr name="cardContent2Img" format="reference" />
+        <attr name="cardContent3Img" format="reference" />
+
+    </declare-styleable>
+    <declare-styleable name="HorizontalProgressBarWithNumber">
+        <attr name="progress_unreached_color" format="color" />
+        <attr name="progress_reached_color" format="color" />
+        <attr name="progress_reached_bar_height" format="dimension" />
+        <attr name="progress_unreached_bar_height" format="dimension" />
+        <attr name="progress_text_size" format="dimension" />
+        <attr name="progress_text_color" format="color" />
+        <attr name="progress_text_offset" format="dimension" />
+        <attr name="progress_text_visibility" format="enum">
+            <enum name="visible" value="0" />
+            <enum name="invisible" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <!-- 垂直方向的虚线 -->
+    <declare-styleable name="DividerView">
+        <!-- 虚线颜色 -->
+        <attr name="divider_line_color" format="color" />
+        <!-- 虚线宽度 -->
+        <attr name="dashThickness" format="dimension" />
+        <!-- 虚线dash宽度 -->
+        <attr name="dashLength" format="dimension" />
+        <!-- 虚线dash间隔 -->
+        <attr name="dashGap" format="dimension" />
+        <!-- 虚线朝向 -->
+        <attr name="divider_orientation" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="StickyLinearLayout_Layout">
+        <attr name="isSticky" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="LrcView">
+        <attr name="lrcTextSize" format="dimension" />
+        <attr name="lrcNormalTextSize" format="dimension" />
+        <attr name="lrcDividerHeight" format="dimension" />
+        <attr name="lrcNormalTextColor" format="reference|color" />
+        <attr name="lrcCurrentTextColor" format="reference|color" />
+        <attr name="lrcTimelineTextColor" format="reference|color" />
+        <attr name="lrcAnimationDuration" format="integer" />
+        <attr name="lrcLabel" format="string" />
+        <attr name="lrcPadding" format="dimension" />
+        <attr name="lrcTimelineColor" format="reference|color" />
+        <attr name="lrcTimelineHeight" format="dimension" />
+        <attr name="lrcPlayDrawable" format="reference" />
+        <attr name="lrcTimeTextColor" format="reference|color" />
+        <attr name="lrcTimeTextSize" format="dimension" />
+        <attr name="lrcTextGravity">
+            <enum name="center" value="0" />
+            <enum name="left" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="PlayStatusView">
+        <!--画笔宽度-->
+        <attr name="paint_width" format="dimension" />
+        <!--画笔颜色-->
+        <attr name="paint_color" format="color" />
+        <!--图形占比，圆占view的宽度（高度，按较小的计算）比，该数值越大图片占view的比例就越大-->
+        <attr name="proportion" format="float"></attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="CircleProgressView">
+        <!--画笔宽度-->
+        <attr name="progress_paint_width" format="dimension" />
+        <!--画笔颜色-->
+        <attr name="progress_paint_color" format="color" />
+        <!--加载进度的开始位置-->
+        <attr name="location" format="enum">
+            <enum name="left" value="1" />
+            <enum name="top" value="2" />
+            <enum name="right" value="3" />
+            <enum name="bottom" value="4" />
+        </attr>
+    </declare-styleable>
+
+
+</resources>

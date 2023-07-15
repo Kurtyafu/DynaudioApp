@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <!--    声场聚焦-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_ssf"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_car"
+            android:layout_width="224dp"
+            android:layout_height="438dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/img_car"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/ll_left_ssf"
+            android:layout_width="145dp"
+            android:layout_height="384dp"
+            android:layout_marginEnd="55dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@id/img_car"
+            app:layout_constraintEnd_toStartOf="@id/img_car"
+            app:layout_constraintTop_toTopOf="@+id/img_car">
+
+            <TextView
+                android:id="@+id/tv_all_car"
+                android:layout_width="145dp"
+                android:layout_height="64dp"
+                android:gravity="center"
+                android:text="@string/all_car"
+                android:textColor="#FFFFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_main_driver"
+                android:layout_width="145dp"
+                android:layout_height="64dp"
+                android:gravity="center"
+                android:text="@string/main_driver"
+                android:textColor="#FFFFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_first_officer"
+                android:layout_width="145dp"
+                android:layout_height="64dp"
+                android:gravity="center"
+                android:text="@string/first_officer"
+                android:textColor="#FFFFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_back_row"
+                android:layout_width="145dp"
+                android:layout_height="64dp"
+                android:gravity="center"
+                android:text="@string/back_row"
+                android:textColor="#FFFFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_surround"
+                android:layout_width="145dp"
+                android:layout_height="64dp"
+                android:gravity="center"
+                android:text="@string/surround"
+                android:textColor="#FFFFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ssf_regulation"
+                android:layout_width="145dp"
+                android:layout_height="64dp"
+                android:gravity="center"
+                android:text="@string/ssf_regulation"
+                android:textColor="#FFFFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_reset"
+            android:layout_width="65dp"
+            android:layout_height="28dp"
+            android:background="@drawable/reset_bg"
+            android:layout_marginBottom="-18dp"
+            android:gravity="center"
+            android:text="@string/reset"
+            android:textColor="@color/white_alpha_80"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@id/img_car"
+            app:layout_constraintStart_toStartOf="@id/img_car"
+            app:layout_constraintBottom_toBottomOf="@id/img_car" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_tips"
+            android:layout_width="276dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="120dp"
+            android:gravity="center_horizontal"
+            android:maxLines="3"
+            android:text="@string/tips_in_ssf"
+            android:textColor="@color/white_alpha_45"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_tip_top"
+            android:layout_width="108dp"
+            android:layout_height="20dp"
+            android:text="@string/click_or_drag"
+            android:textColor="#ffffffff"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/cl_car"
+            app:layout_constraintStart_toStartOf="@id/cl_car"
+            app:layout_constraintTop_toTopOf="@id/cl_car" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_car"
+            android:layout_width="224dp"
+            android:layout_height="438dp"
+            app:layout_constraintBottom_toBottomOf="@id/img_car"
+            app:layout_constraintEnd_toEndOf="@id/img_car"
+            app:layout_constraintStart_toStartOf="@+id/img_car"
+            app:layout_constraintTop_toTopOf="@id/img_car">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_surround"
+                android:layout_width="158dp"
+                android:layout_height="269dp"
+                android:layout_marginBottom="42dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/ll_vertical"
+                    android:layout_width="4dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <ImageView
+                        android:layout_width="4dp"
+                        android:layout_height="4dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_arrow_for_ssf" />
+
+                    <com.byd.dynaudio_app.custom.DividerView
+                        android:layout_width="1dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layerType="software"
+                        app:dashGap="4dp"
+                        app:dashLength="4dp"
+                        app:dashThickness="4dp"
+                        app:divider_line_color="@color/white_alpha_65"
+                        app:divider_orientation="vertical" />
+
+                    <ImageView
+                        android:layout_width="4dp"
+                        android:layout_height="4dp"
+                        android:rotation="180"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_arrow_for_ssf" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="4dp"
+                        android:layout_height="4dp"
+                        android:rotation="-90"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_arrow_for_ssf" />
+
+                    <com.byd.dynaudio_app.custom.DividerView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="1dp"
+                        android:layerType="software"
+                        app:dashGap="4dp"
+                        app:dashLength="4dp"
+                        app:dashThickness="4dp"
+                        app:divider_line_color="@color/white_alpha_65"
+                        app:divider_orientation="horizontal" />
+
+                    <ImageView
+                        android:layout_width="4dp"
+                        android:layout_height="4dp"
+                        android:rotation="90"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_arrow_for_ssf" />
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/c"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--        <com.airbnb.lottie.LottieAnimationView-->
+        <!--            android:id="@+id/lottie"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"/>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

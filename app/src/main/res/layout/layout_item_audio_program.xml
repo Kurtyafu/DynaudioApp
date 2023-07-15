@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/select_item_bg"
+        android:clickable="true"
+        android:orientation="horizontal">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingVertical="10dp">
+
+            <View
+                android:id="@+id/view_radio_btn"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="6.5dp"
+                android:background="@drawable/select_radio_button"
+                android:visibility="gone"
+                android:layout_marginStart="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.byd.dynaudio_app.custom.PlayAnimatorView
+                android:id="@+id/view_playing"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="-2dp"
+                android:layout_marginTop="3.5dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/txt_num"
+                app:layout_constraintEnd_toEndOf="@id/txt_num"
+                app:layout_constraintStart_toStartOf="@id/txt_num"
+                app:layout_constraintTop_toTopOf="@id/txt_num" />
+
+            <TextView
+                android:id="@+id/txt_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_number"
+                android:gravity="end"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="1dp"
+                android:textColor="@color/white_alpha_45"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/txt_name"
+                app:layout_constraintEnd_toStartOf="@id/txt_name"
+                app:layout_constraintTop_toTopOf="@id/txt_name" />
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="49dp"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:maxWidth="578dp"
+                android:singleLine="true"
+                android:text="#26 音乐从哪里来？从骨笛的故事说起"
+                android:textColor="@drawable/select_text_item_playing"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                app:layout_constraintStart_toStartOf="@id/txt_name"
+                app:layout_constraintTop_toBottomOf="@id/txt_name"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.byd.dynaudio_app.custom.LabelView
+                    android:id="@+id/lab_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="17.5dp"
+                    android:visibility="gone"
+                    android:layout_marginEnd="5dp" />
+
+                <TextView
+                    android:id="@+id/txt_update_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="今日更新"
+                    android:textColor="@color/white_alpha_45"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/txt_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:includeFontPadding="false"
+                    android:text="35分钟"
+                    android:drawablePadding="5dp"
+                    android:textColor="@color/white_alpha_45"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/view_collect"
+                android:layout_width="53dp"
+                android:layout_height="53dp"
+                android:layout_marginEnd="6dp"
+                android:padding="14dp"
+                android:src="@drawable/select_ic_collect"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/txt_delete"
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:background="#2F3031"
+            android:gravity="center"
+            android:text="取消收藏"
+            android:textColor="#FF3D46"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</layout>

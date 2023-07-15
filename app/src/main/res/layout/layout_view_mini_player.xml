@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/view_sb"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@drawable/shape_mini_player_top"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#2f3031">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/mini_player_progress_bg"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/img_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:src="@color/mini_player_progress" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_icon"
+                android:layout_width="53dp"
+                android:layout_height="53dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/miniplay_loading"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="37dp"
+                android:ellipsize="end"
+                android:maxWidth="424dp"
+                android:maxLines="1"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img_icon" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:maxWidth="300dp"
+                android:maxLines="1"
+                android:textColor="#8c8d8d"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_title"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+            <com.byd.dynaudio_app.custom.LabelView
+                android:id="@+id/tv_label"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_content"
+                app:layout_constraintStart_toEndOf="@+id/tv_content"
+                app:layout_constraintTop_toTopOf="@+id/tv_content" />
+
+            <ImageView
+                android:id="@+id/img_menu"
+                android:layout_width="53dp"
+                android:layout_height="53dp"
+                android:layout_marginEnd="10dp"
+                android:padding="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_menu"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_next"
+                android:layout_width="53dp"
+                android:layout_height="53dp"
+                android:layout_marginEnd="20dp"
+                android:padding="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/img_menu"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_play"
+                android:layout_width="53dp"
+                android:layout_height="53dp"
+                android:layout_marginEnd="20dp"
+                android:padding="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_play_mini"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/img_next"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_collect"
+                android:layout_width="53dp"
+                android:layout_height="53dp"
+                android:layout_marginEnd="20dp"
+                android:padding="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_collect"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/img_play"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</layout>

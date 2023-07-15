@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="lrc_animation_duration">1000</integer>
+    <dimen name="lrc_text_size">16sp</dimen>
+    <dimen name="lrc_time_text_size">12sp</dimen>
+    <dimen name="lrc_divider_height">20dp</dimen>
+    <dimen name="lrc_timeline_height">1dp</dimen>
+    <dimen name="lrc_drawable_width">30dp</dimen>
+    <dimen name="lrc_time_width">40dp</dimen>
+    <dimen name="shadow_size">10dp</dimen>
+    <dimen name="tab_marginTop">56dp</dimen>
+    <dimen name="single_marginStart">29dp</dimen>
+    <dimen name="two_marginStart">36.5dp</dimen>
+    <dimen name="three_marginStart">46.5dp</dimen>
+    <dimen name="loading_width">2dp</dimen>
+</resources>

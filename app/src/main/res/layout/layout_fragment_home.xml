@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="hifi"
+            type="com.byd.dynaudio_app.bean.HifiBean" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#a0a1a1"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="223dp"
+                android:minHeight="46dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/top_bg"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_login"
+                    android:layout_width="38dp"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="9dp"
+                    android:background="@drawable/home_button_bg"
+                    android:gravity="center"
+                    android:text="@string/login"
+                    android:textColor="#000000"
+                    android:textSize="9.6sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_audio_settings"
+                    android:layout_width="69dp"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="58dp"
+                    android:background="@drawable/home_button_bg"
+                    android:gravity="center"
+                    android:text="@string/audio_settings"
+                    android:textColor="#000000"
+                    android:textSize="9.6sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_top_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="63dp"
+                    android:layout_marginTop="92dp"
+                    android:text="@string/dynaudio_ai_music_car"
+                    android:textColor="#ffffff"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_top_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_top_content"
+                    android:textColor="#c7c8c8"
+                    android:textSize="9.6sp"
+                    app:layout_constraintStart_toStartOf="@+id/tv_top_title"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_top_title" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_immediate_experience"
+                    android:layout_width="50dp"
+                    android:layout_height="14dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="58dp"
+                    android:background="@drawable/home_button_bg"
+                    android:gravity="center"
+                    android:text="@string/immediate_experience"
+                    android:textColor="#000000"
+                    android:textSize="9.6sp"
+                    app:layout_constraintStart_toStartOf="@id/tv_top_content"
+                    app:layout_constraintTop_toBottomOf="@id/tv_top_content"
+                    app:layout_goneMarginTop="15dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/sv_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fadingEdge="none"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/ll_sv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#a0a1a1"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="287dp"
+                    android:orientation="horizontal">
+
+                    <com.byd.dynaudio_app.custom.HifiCard
+                        android:id="@+id/card_hifi"
+                        android:layout_width="330dp"
+                        android:layout_height="287dp" />
+
+                    <ImageView
+                        android:id="@+id/card_news"
+                        android:layout_width="244dp"
+                        android:layout_height="287dp"
+                        android:layout_marginLeft="12dp"
+                        android:src="#ffffff" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <com.byd.dynaudio_app.custom.ColumnCard
+                    android:id="@+id/card_black_plastic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.byd.dynaudio_app.custom.ColumnCard
+                    android:id="@+id/card_audio_column"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.byd.dynaudio_app.custom.ColumnCard
+                    android:id="@+id/card_3d_immersion_sound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

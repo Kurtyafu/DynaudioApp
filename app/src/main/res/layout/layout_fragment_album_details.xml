@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/swipe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/root_bg">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/ll_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:overScrollMode="never"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:id="@+id/top_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="210dp"
+                        android:paddingTop="56dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:background="#2F3031"
+                        android:paddingHorizontal="20dp">
+
+                        <com.byd.dynaudio_app.custom.TabLayout
+                            android:id="@+id/tab_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <View
+                            android:id="@+id/ic_sequence"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:layout_toStartOf="@id/txt_sequence"
+                            android:background="@mipmap/ic_positive_sequence" />
+
+                        <TextView
+                            android:id="@+id/txt_sequence"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:gravity="center"
+                            android:text="正序"
+                            android:textColor="@color/white_alpha_80"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="20dp"
+                        android:background="@color/card_bg"
+                        android:orientation="vertical">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:overScrollMode="never"
+                            android:paddingTop="20dp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_introduce"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="20dp"
+                        android:background="@color/card_bg"
+                        android:orientation="vertical"
+                        android:padding="20dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="简介"
+                            android:textColor="@color/white_alpha_80"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txt_introduction"
+                            android:layout_width="470dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:lineHeight="22dp"
+                            android:text="马赛克四重奏乐团的《A小调四重奏》以异常宽广的节奏强调音乐的悲情与孤独。匈牙利风味的结局在这里，就像在梦中一样从小步舞曲幽灵般的从结尾偷偷溜进来。"
+                            android:textColor="@color/white_alpha_45"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/txt_singer_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="40dp"
+                            android:text="艺术家"
+                            android:visibility="invisible"
+                            android:textColor="@color/white_alpha_80"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_singer"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_marginTop="40dp"
+                            android:orientation="horizontal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="40dp"
+                            android:text="详细介绍"
+                            android:visibility="invisible"
+                            android:textColor="@color/white_alpha_80"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txt_detailed_introduction"
+                            android:layout_width="470dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:lineHeight="22dp"
+                            android:textColor="@color/white_alpha_45"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <FrameLayout
+            android:id="@+id/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:alpha="0" />
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="64dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="56dp"
+            android:scaleType="center"
+            android:src="@mipmap/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/checknet"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/loading_bg"
+            android:gravity="center"
+            android:text="@string/checknet"
+            android:textColor="@color/nomel_color_red"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_empty_data"
+                android:text="暂无内容"
+                android:layout_marginTop="505dp"
+                android:textSize="15sp"
+                android:textColor="@color/white_alpha_45"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </FrameLayout>
+
+</layout>
